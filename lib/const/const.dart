@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const Color blueAccentColor1 = Color.fromARGB(255, 37, 50, 127);
+const Color blueAccentColor = Color.fromARGB(255, 37, 50, 127);
 
 const Color purpleAccent = Color.fromARGB(255, 139, 4, 131);
 

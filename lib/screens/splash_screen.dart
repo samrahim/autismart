@@ -1,8 +1,8 @@
 import 'package:autismart/const/const.dart';
-import 'package:autismart/main.dart';
-
 import 'package:autismart/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+
+import 'home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -89,7 +89,7 @@ class _SplashScreenState extends State<SplashScreen>
                           child: const Text(
                             'AutiSmart',
                             style: TextStyle(
-                              color: blueAccentColor1,
+                              color: blueAccentColor,
                               fontFamily: 'BoldenVan demo',
                               fontSize: 32.0,
                               fontWeight: FontWeight.bold,
@@ -102,7 +102,7 @@ class _SplashScreenState extends State<SplashScreen>
                           child: const Text(
                             'welcome',
                             style: TextStyle(
-                              color: blueAccentColor1,
+                              color: blueAccentColor,
                               fontSize: 26.0,
                               fontWeight: FontWeight.bold,
                             ),
