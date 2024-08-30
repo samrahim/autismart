@@ -22,28 +22,28 @@ List<ReviewModel> models = [
       userName: 'SOHYLA DAHAB',
       imagePath: 'images/first_user.png',
       reviewBody:
-          'The auti smart watch has/ngreatly improved my son’s/ndaily routine and social/ninteractions with everyone/naround him',
+          'The auti smart watch has\ngreatly improved my son’s \ndaily routine and social\ninteractions with everyone\naround him',
       rating: 5,
       color: green),
   ReviewModel(
       userName: 'MAMI ATEF',
       imagePath: 'images/men.png',
       reviewBody:
-          'The auti smart watch has/ngreatly improved my son’s/ndaily routine and social/ninteractions with family,/nteachers and peers',
+          'The auti smart watch has\ngreatly improved my son’s\ndaily routine and social\ninteractions with family,\nteachers and peers',
       rating: 5,
       color: blue),
   ReviewModel(
       userName: 'SAOU SAMIHA',
       imagePath: 'images/hijab.png',
       reviewBody:
-          "The auti smart watch has/ngreatly improved my son’s/ndaily routine and social/ninteractions with friend",
+          "The auti smart watch has\ngreatly improved my son’s\ndaily routine and social\ninteractions with friend",
       rating: 5,
       color: purpleAccent),
   ReviewModel(
       userName: "BENAJI AMIRA",
       imagePath: 'images/maman.png',
       reviewBody:
-          'The auti smart watch has/ngreatly improved my daughter’s/ndaily routine and social\nninteractions',
+          'The auti smart watch has\ngreatly improved my daughter’s\ndaily routine and social\nninteractions',
       rating: 5,
       color: purple)
 ];

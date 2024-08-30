@@ -20,7 +20,6 @@ class SixthPage extends StatelessWidget {
             )),
         Column(
           children: [
-            const SizedBox(height: 24),
             const Text(
               'Benefits of',
               style: TextStyle(
@@ -28,7 +27,6 @@ class SixthPage extends StatelessWidget {
                   fontSize: 26,
                   color: blueAccentColor),
             ),
-            const SizedBox(height: 5),
             const Text(
               'AutiSmartWatch',
               style: TextStyle(
@@ -39,15 +37,13 @@ class SixthPage extends StatelessWidget {
             Image.asset(
               'images/star_icon.png',
               width: 170,
-              height: 85,
+              height: 80,
             ),
             const Text('Simplify Daily Tasks',
                 style: TextStyle(
                     color: blue, fontSize: 22, fontWeight: FontWeight.w600)),
-            const SizedBox(height: 4),
             const Text('Effortlessly manage routines with '),
             const Text('our smart watch'),
-            const SizedBox(height: 4),
             Image.asset('images/verify_icon.png', width: 80, height: 80),
             const Text('Empower Independence',
                 style: TextStyle(
@@ -57,7 +53,7 @@ class SixthPage extends StatelessWidget {
             Image.asset(
               'images/3d_hand_icon.png',
               width: 118,
-              height: 118,
+              height: 110,
             ),
             const Text('Headline: Interactive Prompts',
                 style: TextStyle(
@@ -70,8 +66,8 @@ class SixthPage extends StatelessWidget {
           ],
         ),
         Positioned(
-            bottom: MediaQuery.of(context).size.height / 25,
-            left: 20,
+            bottom: MediaQuery.of(context).size.height / 30,
+            left: 0,
             child: Image.asset(
               'images/yellow.png',
               height: 41,
