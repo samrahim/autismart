@@ -43,7 +43,7 @@ class SecondPage extends StatelessWidget {
             const SizedBox(height: 8),
             const Text('Simplify tasks and promote independence with'),
             const Text('our innovative smart watch'),
-            SizedBox(height: MediaQuery.of(context).size.height / 2.3),
+            SizedBox(height: MediaQuery.of(context).size.height / 2.2),
             const Text("AutiSmart is designed to support autistic"),
             const Text('children in managing their daily activities'),
             const Text('effortlessly, providing reminders and'),
