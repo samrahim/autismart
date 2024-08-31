@@ -1,8 +1,96 @@
 import 'package:autismart/const/const.dart';
 import 'package:flutter/material.dart';
 
-class EighthPage extends StatelessWidget {
+class EighthPage extends StatefulWidget {
   const EighthPage({super.key});
+
+  @override
+  State<EighthPage> createState() => _EighthPageState();
+}
+
+class _EighthPageState extends State<EighthPage> with TickerProviderStateMixin {
+  late final AnimationController firstController;
+  late final AnimationController secondController;
+  late final AnimationController thirdController;
+  late final AnimationController fourthController;
+
+  late final Animation<double> firstAnimation;
+  late final Animation<double> secondAnimation;
+  late final Animation<double> thirdAnimation;
+  late final Animation<double> fourthAnimation;
+  @override
+  void initState() {
+    super.initState();
+
+    firstController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
+
+    secondController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
+
+    thirdController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
+
+    fourthController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    );
+
+    firstAnimation = CurvedAnimation(
+      parent: firstController,
+      curve: Curves.easeInSine,
+    );
+
+    secondAnimation = CurvedAnimation(
+      parent: secondController,
+      curve: Curves.easeInSine,
+    );
+
+    thirdAnimation = CurvedAnimation(
+      parent: thirdController,
+      curve: Curves.easeInSine,
+    );
+
+    fourthAnimation = CurvedAnimation(
+      parent: fourthController,
+      curve: Curves.easeInSine,
+    );
+
+    firstController.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        secondController.forward();
+      }
+    });
+
+    secondController.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        thirdController.forward();
+      }
+    });
+
+    thirdController.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        fourthController.forward();
+      }
+    });
+
+    firstController.forward();
+  }
+
+  @override
+  void dispose() {
+    firstController.dispose();
+    secondController.dispose();
+    thirdController.dispose();
+    fourthController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -101,7 +189,41 @@ class EighthPage extends StatelessWidget {
             bottom: MediaQuery.of(context).size.height / 20,
             child: const Text('©2024 AutiSmartWatch Powred by 7RATIO',
                 style: TextStyle(color: Colors.white)),
-          )
+          ),
+          Positioned(
+            bottom: MediaQuery.of(context).size.height / 6,
+            child: Row(
+              children: [
+                SizeTransition(
+                  sizeFactor: firstAnimation,
+                  axis: Axis.horizontal,
+                  axisAlignment: -1.0,
+                  child: Image.asset("images/fb.png"),
+                ),
+                const SizedBox(width: 4),
+                SizeTransition(
+                  sizeFactor: secondAnimation,
+                  axis: Axis.horizontal,
+                  axisAlignment: -1.0,
+                  child: Image.asset("images/inst.png"),
+                ),
+                const SizedBox(width: 4),
+                SizeTransition(
+                  sizeFactor: thirdAnimation,
+                  axis: Axis.horizontal,
+                  axisAlignment: -1.0,
+                  child: Image.asset("images/in.png"),
+                ),
+                const SizedBox(width: 4),
+                SizeTransition(
+                  sizeFactor: fourthAnimation,
+                  axis: Axis.horizontal,
+                  axisAlignment: -1.0,
+                  child: Image.asset("images/twitter.png"),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

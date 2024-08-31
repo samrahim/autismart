@@ -1,5 +1,4 @@
 import 'package:autismart/const/const.dart';
-import 'package:autismart/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class SixthPage extends StatelessWidget {
