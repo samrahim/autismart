@@ -1,4 +1,5 @@
 import 'package:autismart/const/consts.dart';
+import 'package:autismart/widgets/custom_design.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatefulWidget {
@@ -134,9 +135,37 @@ class _CustomDrawerState extends State<CustomDrawer> {
                         color:
                             widget.index == 7 ? blueAccentColor : Colors.white))
               ],
-            )
+            ),
           ],
         ),
+        Positioned(
+            top: MediaQuery.of(context).size.height / 8,
+            right: 20,
+            child: Image.asset(
+              'images/yellow.png',
+              height: 29,
+              width: 29,
+            )),
+        Positioned(
+            top: MediaQuery.of(context).size.height / 4,
+            left: 0,
+            child: CustomDesign(height: 40, width: 40, color: green)),
+        Positioned(
+            bottom: MediaQuery.of(context).size.height / 4,
+            right: 0,
+            child: Image.asset(
+              'images/green.png',
+              height: 40,
+              width: 40,
+            )),
+        Positioned(
+            bottom: MediaQuery.of(context).size.height / 12,
+            left: 0,
+            child: CustomDesign(height: 30, width: 30, color: purple)),
+        Positioned(
+            bottom: MediaQuery.of(context).size.height / 30,
+            right: 0,
+            child: CustomDesign(height: 30, width: 30, color: purpleAccent)),
       ],
     );
   }
