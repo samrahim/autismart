@@ -3,7 +3,6 @@ import 'package:autismart/screens/page_view/page_view.dart';
 import 'package:autismart/widgets/widgets.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
